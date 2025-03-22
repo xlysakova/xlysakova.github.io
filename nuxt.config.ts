@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/ui'],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/ui', '@nuxt/fonts'],
   app: {
     head: {
       title: 'Denisa - UX/UI Designer',

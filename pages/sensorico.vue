@@ -11,12 +11,13 @@ const mockupItems = [
 
 <template>
     <GradientBackground>
+        <AppHeader />
         <!-- Added max-w classes to limit width on large screens -->
         <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
             <!-- SECTION 1: Header and App Overview -->
             <div class="flex flex-col md:flex-row justify-around items-center gap-4 mb-8 md:mb-16">
                 <!-- Left column - Content -->
-                <div class="w-full md:w-1/2 pt-16">
+                <div class="w-full md:w-1/2 md:pt-16">
                     <!-- Header Section -->
                     <header class="mb-4 md:mb-6">
                         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-500 mb-2">Sensorico</h1>

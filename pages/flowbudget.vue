@@ -17,10 +17,11 @@ const mockupItems = [
 
 <template>
   <GradientBackground>
+    <AppHeader />
     <!-- Main container with max-width to center content on large screens -->
     <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-6xl">
       <!-- SECTION 1: Header and App Overview -->
-      <div class="flex flex-col md:flex-row justify-around gap-4 md:gap-x-[40px] mb-12 md:mb-16 pt-16">
+      <div class="flex flex-col md:flex-row justify-around gap-4 md:gap-x-[40px] mb-12 md:mb-16 md:pt-16">
         <!-- Left column - Content -->
         <div class="w-full md:w-2/3">
           <!-- Header Section -->

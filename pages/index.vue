@@ -60,7 +60,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
 }
 
 body {

@@ -37,15 +37,14 @@ onUnmounted(() => {
       <div class="container">
         <div class="about-content">
           <div class="bio">
-            <div class="flex gap-x-2">
+            <div class="title-container">
               <Wave />
-              <h2 class="text-primary text-[32px] pb-4">Zdravím</h2>
+              <h2 class="text-primary text-[32px] pb-4 md:text-[32px] sm:text-[28px]">Zdravím</h2>
             </div>
 
-            <div class="inline-flex gap-x-20">
-              <div>
-
-                <p class="text-lg pb-8">
+            <div class="profile-container">
+              <div class="profile-text">
+                <p class="text-base md:text-lg pb-8">
                   jsem Denisa, junior UX/UI designérka z Brna. Moje cesta k UX/UI designu nebyla úplně přímá – původně
                   jsem
                   pracovala v administrativě, kde jsem si uvědomila, jak důležité je, aby systémy a aplikace byly
@@ -55,35 +54,36 @@ onUnmounted(() => {
                 </p>
 
                 <h3 class="text-primary text-lg">Vzdělání a certifikace:</h3>
-                <ul class="leading-7">
+                <ul class="education-list">
                   <li>Střední fotograficka škola s maturitou</li>
                   <li>UX/ UI kurz - Czechitas</li>
                   <li>UX/UI kurz - Udemy</li>
                 </ul>
               </div>
-              <img src="/images/profile.png" alt="my photo" class="rounded-md h-[370px] object-center" />
+              <img src="/images/profile.png" alt="my photo" class="profile-image" />
             </div>
 
-            <div class="flex gap-x-20 pt-12">
-              <div class="flex flex-col gap-y-1">
+            <div class="skills-container">
+              <div class="skill-section">
                 <h4 class="text-primary text-lg">Nástroje</h4>
-                <ul class="flex flex-col gap-y-1">
+                <ul class="skill-list">
                   <li>🖌️ Figma, Photoshop, Canva</li>
                   <li>📝 Miro</li>
                 </ul>
               </div>
 
-              <div class="flex flex-col gap-y-1">
+              <div class="skill-section">
                 <h4 class="text-primary text-lg">Dovednosti</h4>
-                <ul class="flex flex-col gap-y-1">
+                <ul class="skill-list">
                   <li>🎨 UI/UX Design</li>
                   <li>🛠️ Wireframing & Prototyping</li>
                   <li>🧩 Uživatelský výzkum</li>
                 </ul>
               </div>
-              <div class="flex flex-col gap-y-1">
+              
+              <div class="skill-section">
                 <h4 class="text-primary text-lg">Koníčky</h4>
-                <ul class="flex flex-col gap-y-1">
+                <ul class="skill-list">
                   <li>🏋️‍♀️ Fitness</li>
                   <li>🎨 Kreslení</li>
                   <li>✈️ Cestování</li>
@@ -91,8 +91,8 @@ onUnmounted(() => {
                 </ul>
               </div>
             </div>
-            <!-- Replace your existing button with this -->
-            <button class="flex items-center gap-x-2" @click="openModal">
+            
+            <button class="cv-button" @click="openModal">
               <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_496_1773)">
                   <path
@@ -110,17 +110,14 @@ onUnmounted(() => {
               </p>
             </button>
 
-            <!-- Replace your existing dialog with this -->
-            <dialog ref="dialog" class="bg-white w-8/12 rounded-md mx-auto my-auto relative">
-              <button autofocus @click="closeModal"
-                class="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
-                aria-label="Close dialog">
+            <dialog ref="dialog" class="cv-dialog">
+              <button autofocus @click="closeModal" class="close-button" aria-label="Close dialog">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18 6L6 18M6 6L18 18" stroke="#C25874" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
               </button>
-              <img src="/images/cv.png" alt="my cv" class="object-cover" />
+              <img src="/images/cv.png" alt="my cv" class="cv-image" />
             </dialog>
 
           </div>
@@ -134,10 +131,16 @@ onUnmounted(() => {
   background: rgba(0, 0, 0, 0.5);
 }
 
-
 .about-section {
   padding: 2rem 0 5rem;
   min-height: calc(100vh - 100px);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .about-content {
@@ -146,43 +149,154 @@ onUnmounted(() => {
 }
 
 .bio {
-  max-width: 80%;
+  width: 100%;
+  max-width: 90%;
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+.title-container {
+  display: flex;
   gap: 0.5rem;
-  list-style-type: none;
-  margin: 1rem 0 2rem;
-}
-
-.skills-list li {
-  background-color: rgba(209, 112, 137, 0.1);
-  color: #d17089;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-size: 0.9rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
-.contact-info {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.social-links {
+.profile-container {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-image {
+  border-radius: 0.375rem;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  align-self: center;
+}
+
+.education-list {
+  margin-top: 0.5rem;
+  line-height: 1.75;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cv-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.cv-dialog {
+  background-color: white;
+  width: 95%;
+  max-width: 1000px;
+  border-radius: 0.375rem;
+  margin: auto;
+  position: relative;
+  border: none;
+  padding: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cv-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .bio {
+    padding: 2rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .bio {
+    padding: 2.5rem;
+    max-width: 85%;
+  }
+  
+  .profile-container {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+  
+  .profile-image {
+    max-height: 370px;
+    width: auto;
+  }
+  
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bio {
+    max-width: 80%;
+  }
+  
+  .skills-container {
+    gap: 5rem;
+  }
 }
 </style>

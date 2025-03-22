@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 :root {
+    font-family: Poppins;
     --color-primary-50: 255 242 242;
     --color-primary-100: 255 228 230;
     --color-primary-200: 254 205 211;
@@ -16,3 +21,4 @@
     --color-primary-950: 76 5 25;
     --color-primary-DEFAULT: 194 88 116; /* Your specific #FF6363 color */
   }
+  

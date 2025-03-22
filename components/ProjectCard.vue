@@ -88,14 +88,14 @@
   }
   
   .project-title {
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
   }
   
   .project-description {
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     color: white;
