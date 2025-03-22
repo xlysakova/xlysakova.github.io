@@ -2,10 +2,10 @@
     <section class="intro-section">
         <div class="content">
             <h1>
-                Zdravím, jmenuju se <span class="highlight">Denisa</span>,<br />
-                a jsem <span class="highlight blur-background">UX/UI DESIGNER</span>
+                Zdravím, jmenuji se <span class="italic text-primary">Denisa</span><br />
+                a jsem <span class="italic text-primary">UX/UI DESIGNER</span>
             </h1>
-            <div class="scroll-arrow">
+            <div class="scroll-arrow flex justify-center">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M19 12L12 19L5 12" stroke="#333" stroke-width="2" stroke-linecap="round"
@@ -72,7 +72,6 @@ h1 {
 
 .scroll-arrow {
     animation: bounce 2s infinite;
-    margin-top: 2rem;
 }
 
 @keyframes bounce {

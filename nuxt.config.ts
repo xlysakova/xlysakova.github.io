@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/ui'],
   app: {
     head: {
       title: 'Denisa - UX/UI Designer',
@@ -23,12 +24,16 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/main.css'],
-  modules: [
-    // Add any Nuxt modules you need here
-  ],
-  postcss: {
-    plugins: {
-      autoprefixer: {}
-    }
+  compatibilityDate: '2025-03-22',
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css',
+    configPath: '~/tailwind.config.ts',
+    exposeConfig: true,
+    viewer: true,
+  },
+  ui: {
+    global: true,
+    safelistColors: ['primary', 'secondary'],
+    disableGlobalStyles: true,
   }
 })
