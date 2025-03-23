@@ -37,7 +37,7 @@ onUnmounted(() => {
       <div class="container">
         <div class="about-content">
           <div class="bio">
-            <div class="title-container flex items-center pb-4 gap-x-2">
+            <div class="title-container flex items-center pb-10 gap-x-2">
               <Wave class="block" />
               <h2 class="text-primary-500 text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
             </div>
