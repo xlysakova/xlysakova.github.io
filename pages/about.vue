@@ -42,32 +42,32 @@ onUnmounted(() => {
               <h2 class="text-primary-500 text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
             </div>
 
-            <div class="flex flex-col md:flex-row items-start gap-12">
-              <div class="profile-text flex-2">
-                <p class="text-base md:text-lg pb-10 text-pretty">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+              <!-- Mobile-first image positioning -->
+              <img class="object-contain w-[200px] md:w-[300px] mb-6 md:mb-0 md:order-2" 
+                  :src="useRuntimeConfig().app.baseURL + 'images/profile.png'" 
+                  alt="Profile picture">
+              
+              <div class="profile-text flex-1 md:order-1">
+                <p class="text-base md:text-lg pb-6 text-pretty">
                   jsem Denisa, junior UX/UI designérka z Brna. Moje cesta k UX/UI designu nebyla úplně přímá – původně
-                  jsem
-                  pracovala v administrativě, kde jsem si uvědomila, jak důležité je, aby systémy a aplikace byly
-                  intuitivní
-                  a uživatelsky přívětivé. To mě vedlo k rozhodnutí změnit kariéru a věnovat se oblasti, kde mohu spojit
+                  jsem pracovala v administrativě, kde jsem si uvědomila, jak důležité je, aby systémy a aplikace byly
+                  intuitivní a uživatelsky přívětivé. To mě vedlo k rozhodnutí změnit kariéru a věnovat se oblasti, kde mohu spojit
                   kreativitu s logickým myšlením.
                 </p>
 
-                <h3 class="text-primary-500 text-lg pt-[24px]">Vzdělání a certifikace:</h3>
+                <h3 class="text-primary-500 text-lg pt-4">Vzdělání a certifikace:</h3>
                 <ul class="education-list">
                   <li>Střední fotograficka škola s maturitou</li>
                   <li>UX/ UI kurz - Czechitas</li>
                   <li>UX/UI kurz - Udemy</li>
                 </ul>
               </div>
-
-              <img class="object-contain w-[300px]" :src="useRuntimeConfig().app.baseURL + 'images/profile.png'">
-
             </div>
 
-            <div class="skills-container">
+            <div class="skills-container mt-8">
               <div class="skill-section">
-                <h4 class="text-primary-500 text-lg">Nástroje</h4>
+                <h4 class="text-primary-500 text-lg mb-2">Nástroje</h4>
                 <ul class="skill-list">
                   <li>🖌️ Figma, Photoshop, Canva</li>
                   <li>📝 Miro</li>
@@ -75,7 +75,7 @@ onUnmounted(() => {
               </div>
 
               <div class="skill-section">
-                <h4 class="text-primary-500 text-lg">Dovednosti</h4>
+                <h4 class="text-primary-500 text-lg mb-2">Dovednosti</h4>
                 <ul class="skill-list">
                   <li>🎨 UI/UX Design</li>
                   <li>🛠️ Wireframing & Prototyping</li>
@@ -84,7 +84,7 @@ onUnmounted(() => {
               </div>
               
               <div class="skill-section">
-                <h4 class="text-primary-500 text-lg">Koníčky</h4>
+                <h4 class="text-primary-500 text-lg mb-2">Koníčky</h4>
                 <ul class="skill-list">
                   <li>🏋️‍♀️ Fitness</li>
                   <li>🎨 Kreslení</li>
@@ -152,18 +152,12 @@ onUnmounted(() => {
 
 .bio {
   width: 100%;
-  max-width: 90%;
+  max-width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .profile-text {
@@ -178,7 +172,7 @@ onUnmounted(() => {
 .skills-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -191,7 +185,7 @@ onUnmounted(() => {
 .skill-list {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .cv-button {
@@ -229,6 +223,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
+  z-index: 10;
 }
 
 .close-button:hover {
@@ -244,11 +239,13 @@ onUnmounted(() => {
 /* Responsive styles */
 @media (min-width: 640px) {
   .bio {
-    padding: 2rem;
+    padding: 1.75rem;
+    max-width: 95%;
   }
   
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
   }
 }
 
@@ -261,29 +258,21 @@ onUnmounted(() => {
     padding: 2.5rem;
     max-width: 85%;
   }
-  
-  .profile-container {
-    flex-direction: row;
-    gap: 2.5rem;
-  }
-  
-  .profile-image {
-    max-height: 370px;
-    width: auto;
-  }
-  
+    
   .skills-container {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .bio {
+    padding: 3rem;
     max-width: 80%;
   }
   
   .skills-container {
-    gap: 5rem;
+    gap: 3rem;
   }
 }
 </style>
