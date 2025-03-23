@@ -4,11 +4,21 @@ const dialog = useTemplateRef('dialog');
 
 // Add these functions to handle scroll locking
 function disableScroll() {
+  // More robust scroll locking that works on mobile
   document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
+  document.body.style.top = `-${window.scrollY}px`;
 }
 
 function enableScroll() {
+  // Restore scroll position when enabling scroll
+  const scrollY = document.body.style.top;
   document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.width = '';
+  document.body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
 // Handle modal events
@@ -16,17 +26,24 @@ function openModal() {
   if (!dialog.value) return;
   dialog.value.showModal();
   disableScroll();
+  
+  // Add mobile specific class when modal is open
+  document.body.classList.add('modal-open');
 }
 
 function closeModal() {
   if (!dialog.value) return;
   dialog.value.close();
   enableScroll();
+  
+  // Remove mobile specific class when modal is closed
+  document.body.classList.remove('modal-open');
 }
 
 // Ensure scroll is re-enabled if component is unmounted while dialog is open
 onUnmounted(() => {
   enableScroll();
+  document.body.classList.remove('modal-open');
 });
 </script>
 <template>
@@ -133,6 +150,12 @@ onUnmounted(() => {
   background: rgba(0, 0, 0, 0.5);
 }
 
+/* Class added to body when modal is open */
+.modal-open {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+}
+
 .about-section {
   padding: 2rem 0 5rem;
   min-height: calc(100vh - 100px);
@@ -210,6 +233,24 @@ onUnmounted(() => {
   padding: 0;
 }
 
+/* Make modal fullscreen on mobile */
+@media (max-width: 767px) {
+  .cv-dialog {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+}
+
 .close-button {
   position: absolute;
   top: 1rem;
@@ -223,7 +264,8 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
-  z-index: 10;
+  z-index: 1010;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .close-button:hover {
@@ -234,6 +276,14 @@ onUnmounted(() => {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .cv-image {
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 /* Responsive styles */

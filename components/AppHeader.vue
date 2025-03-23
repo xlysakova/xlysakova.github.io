@@ -12,12 +12,14 @@
             Domů
           </NuxtLink>
           
-          <NuxtLink v-if="route.path==='/'" to="/#projects" class="nav-link" :class="{ 'router-link-active': route.path === '/about' }">
-            Projekty
-          </NuxtLink>
+
           
           <NuxtLink to="/about" class="nav-link" :class="{ 'router-link-active': route.path === '/about' }">
             O mně
+          </NuxtLink>
+
+          <NuxtLink v-if="route.path==='/'" to="#projects" class="nav-link" :class="{ 'router-link-active': false }">
+            Projekty
           </NuxtLink>
         </nav>
         
