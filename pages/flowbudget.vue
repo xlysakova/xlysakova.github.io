@@ -191,9 +191,11 @@ const mockupItems = ref([
 
       <!-- Competitor Analysis Images - Carousel (can be wider) -->
       <div class="mx-auto max-w-4xl mb-8 md:mb-12">
-        <UCarousel v-slot="{ item }" arrows :items="carouselItems">
-          <img :src="item" class="rounded-md shadow-md mx-4 h-[420px]" />
-        </UCarousel>
+        <ClientOnly>
+          <UCarousel v-slot="{ item }" arrows :items="carouselItems">
+            <img :src="item" class="rounded-md shadow-md mx-4 h-[420px]" />
+          </UCarousel>
+        </ClientOnly>
       </div>
 
       <!-- Back to narrower content -->
@@ -234,9 +236,11 @@ const mockupItems = ref([
 
       <!-- App Mockups - Can be wider -->
       <div class="mx-auto max-w-4xl mb-8 md:mb-12">
-        <UCarousel v-slot="{ item }" arrows :items="mockupItems">
-          <img :src="item" class="rounded-md shadow-md mx-4 h-[420px]" />
-        </UCarousel>
+        <ClientOnly>
+          <UCarousel v-slot="{ item }" arrows :items="mockupItems">
+            <img :src="item" class="rounded-md shadow-md mx-4 h-[420px]" />
+          </UCarousel>
+        </ClientOnly>
       </div>
 
       <!-- Back to narrower content for test results -->

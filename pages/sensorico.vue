@@ -206,10 +206,11 @@ const mockupItems = ref([
 
             <!-- App Mockups - Can be a bit wider for the grid -->
             <div class="mx-auto max-w-4xl mb-8 md:mb-12">
-                <UCarousel v-slot="{ item }" arrows :items="mockupItems"     :next="{ color: 'primary' }"
-                >
-                    <img :src="item" class="rounded-md shadow-md mx-4 w-[720px]" />
-                </UCarousel>
+                <ClientOnly>
+                    <UCarousel v-slot="{ item }" arrows :items="mockupItems" :next="{ color: 'primary' }">
+                        <img :src="item" class="rounded-md shadow-md mx-4 w-[720px]" />
+                    </UCarousel>
+                </ClientOnly>
             </div>
 
             <!-- Contact Section - Back to narrow -->
