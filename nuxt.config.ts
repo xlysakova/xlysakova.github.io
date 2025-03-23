@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/ui', '@nuxt/fonts'],
+  modules: ['@nuxt/ui'],
   app: {
     head: {
       title: 'Denisa - UX/UI Designer',
@@ -26,15 +26,16 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2025-03-22',
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-    configPath: '~/tailwind.config.ts',
-    exposeConfig: true,
-    viewer: true,
-  },
   ui: {
-    global: true,
-    safelistColors: ['primary', 'secondary'],
-    disableGlobalStyles: true,
-  }
+    fonts: true, 
+    colorMode: false,
+  },
+  vite: {
+    build: {
+      sourcemap: true,
+    },
+    css: {
+      devSourcemap: true,
+    }
+  },
 })

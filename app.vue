@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <UApp>
     <NuxtPage />
-  </div>
+  </UApp>
 </template>
+
 
 <script setup>
 // No additional setup needed
 </script>
 
 <style>
-/* Any global styles can go here, but we've already defined them in assets/css/main.css */
+/* Any global styles can go he  re, but we've already defined them in assets/css/main.css */
 html, body {
   margin: 0;
   padding: 0;

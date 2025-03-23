@@ -13,13 +13,13 @@ const mockupItems = ref([
     <GradientBackground>
         <AppHeader />
         <!-- Added max-w classes to limit width on large screens -->
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pb-[32px]">
             <!-- SECTION 1: Header and App Overview -->
             <div class="flex flex-col md:flex-row justify-around items-center gap-4 mb-8 md:mb-16">
                 <!-- Left column - Content -->
                 <div class="w-full md:w-1/2 md:pt-16">
                     <!-- Header Section -->
-                    <header class="mb-4 md:mb-6">
+                    <header class="pb-12">
                         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-500 mb-2">Sensorico</h1>
                         <p class="text-gray-700">Aplikace pro monitorování spotřeby a optimalizaci energií.</p>
                     </header>

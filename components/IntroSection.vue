@@ -2,8 +2,8 @@
     <section class="intro-section">
         <div class="content">
             <h1>
-                Zdravím, jmenuji se <span class="italic text-primary">Denisa</span><br />
-                a jsem <span class="italic text-primary">UX/UI DESIGNER</span>
+                Zdravím, jmenuji se <span class="italic text-primary-500">Denisa</span><br />
+                a jsem <span class="italic text-primary-500">UX/UI DESIGNER</span>
             </h1>
             <div class="scroll-arrow flex justify-center">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

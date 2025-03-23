@@ -1,16 +1,6 @@
-import type { Config } from 'tailwindcss'
-
 export default {
   safelist: ['primary', 'secondary'],
-  content: [
-    './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './app.vue',
-    './error.vue',
-    './node_modules/@nuxt/ui/dist/**/*.{js,vue,ts}'
-  ],
+  content: [],
   theme: {
     extend: {
       colors: {
@@ -23,4 +13,4 @@ export default {
     }
   },
   plugins: [],
-} satisfies Config
+}

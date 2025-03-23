@@ -39,7 +39,7 @@ onUnmounted(() => {
           <div class="bio">
             <div class="title-container flex items-center pb-4 gap-x-2">
               <Wave class="block" />
-              <h2 class="text-primary text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
+              <h2 class="text-primary-500 text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
             </div>
 
             <div class="flex items-start gap-12">
@@ -53,7 +53,7 @@ onUnmounted(() => {
                   kreativitu s logickým myšlením.
                 </p>
 
-                <h3 class="text-primary text-lg">Vzdělání a certifikace:</h3>
+                <h3 class="text-primary-500 text-lg">Vzdělání a certifikace:</h3>
                 <ul class="education-list">
                   <li>Střední fotograficka škola s maturitou</li>
                   <li>UX/ UI kurz - Czechitas</li>
@@ -67,7 +67,7 @@ onUnmounted(() => {
 
             <div class="skills-container">
               <div class="skill-section">
-                <h4 class="text-primary text-lg">Nástroje</h4>
+                <h4 class="text-primary-500 text-lg">Nástroje</h4>
                 <ul class="skill-list">
                   <li>🖌️ Figma, Photoshop, Canva</li>
                   <li>📝 Miro</li>
@@ -75,7 +75,7 @@ onUnmounted(() => {
               </div>
 
               <div class="skill-section">
-                <h4 class="text-primary text-lg">Dovednosti</h4>
+                <h4 class="text-primary-500 text-lg">Dovednosti</h4>
                 <ul class="skill-list">
                   <li>🎨 UI/UX Design</li>
                   <li>🛠️ Wireframing & Prototyping</li>
@@ -84,7 +84,7 @@ onUnmounted(() => {
               </div>
               
               <div class="skill-section">
-                <h4 class="text-primary text-lg">Koníčky</h4>
+                <h4 class="text-primary-500 text-lg">Koníčky</h4>
                 <ul class="skill-list">
                   <li>🏋️‍♀️ Fitness</li>
                   <li>🎨 Kreslení</li>
