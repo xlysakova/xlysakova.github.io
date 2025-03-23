@@ -8,17 +8,16 @@
         
         <!-- Desktop Navigation -->
         <nav class="main-nav">
-          <NuxtLink to="/" class="nav-link" :class="{ 'router-link-active': route.path === '/' }">
+          <NuxtLink v-if="route.path!=='/'" to="/" class="nav-link" :class="{ 'router-link-active': route.path === '/' }">
+            Domů
+          </NuxtLink>
+          
+          <NuxtLink v-if="route.path==='/'" to="/#projects" class="nav-link" :class="{ 'router-link-active': route.path === '/about' }">
             Projekty
           </NuxtLink>
+          
           <NuxtLink to="/about" class="nav-link" :class="{ 'router-link-active': route.path === '/about' }">
             O mně
-          </NuxtLink>
-          <NuxtLink to="/flowbudget" class="nav-link" :class="{ 'router-link-active': route.path === '/flowbudget' }">
-            Flowbudget
-          </NuxtLink>
-          <NuxtLink to="/sensorico" class="nav-link" :class="{ 'router-link-active': route.path === '/sensorico' }">
-            Sensorico
           </NuxtLink>
         </nav>
         

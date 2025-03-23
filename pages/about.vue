@@ -37,14 +37,14 @@ onUnmounted(() => {
       <div class="container">
         <div class="about-content">
           <div class="bio">
-            <div class="title-container flex items-center pb-10 gap-x-2">
+            <div class="title-container flex items-center pb-5 gap-x-2">
               <Wave class="block" />
               <h2 class="text-primary-500 text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
             </div>
 
-            <div class="flex items-start gap-12">
+            <div class="flex flex-col md:flex-row items-start gap-12">
               <div class="profile-text flex-2">
-                <p class="text-base md:text-lg pb-8 text-pretty">
+                <p class="text-base md:text-lg pb-10 text-pretty">
                   jsem Denisa, junior UX/UI designérka z Brna. Moje cesta k UX/UI designu nebyla úplně přímá – původně
                   jsem
                   pracovala v administrativě, kde jsem si uvědomila, jak důležité je, aby systémy a aplikace byly
@@ -53,7 +53,7 @@ onUnmounted(() => {
                   kreativitu s logickým myšlením.
                 </p>
 
-                <h3 class="text-primary-500 text-lg">Vzdělání a certifikace:</h3>
+                <h3 class="text-primary-500 text-lg pt-[24px]">Vzdělání a certifikace:</h3>
                 <ul class="education-list">
                   <li>Střední fotograficka škola s maturitou</li>
                   <li>UX/ UI kurz - Czechitas</li>
@@ -63,7 +63,7 @@ onUnmounted(() => {
 
               <img class="object-contain w-[300px]" :src="useRuntimeConfig().app.baseURL + 'images/profile.png'">
 
-</div>
+            </div>
 
             <div class="skills-container">
               <div class="skill-section">

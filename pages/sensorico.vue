@@ -10,81 +10,111 @@ const mockupItems = ref([
 </script>
 
 <template>
-    <GradientBackground>
-        <AppHeader />
+    <AppHeader />
         <!-- Added max-w classes to limit width on large screens -->
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pb-[32px]">
-            <!-- SECTION 1: Header and App Overview -->
-            <div class="flex flex-col md:flex-row justify-around items-center gap-4 mb-8 md:mb-16">
-                <!-- Left column - Content -->
-                <div class="w-full md:w-1/2 md:pt-16">
-                    <!-- Header Section -->
-                    <header class="pb-12">
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-500 mb-2">Sensorico</h1>
-                        <p class="text-gray-700">Aplikace pro monitorování spotřeby a optimalizaci energií.</p>
-                    </header>
+        <div class="container mx-auto pb-[32px]">
+             <!-- Hero Section -->
+    <UContainer class="pt-12 pb-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <!-- Left column - Content -->
+        <div class="w-full md:w-1/2">
+          <UBadge color="blue" variant="subtle" class="mb-4">UX/UI CASE STUDY</UBadge>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-500 mb-4">Sensorico</h1>
+          <p class="text-lg text-gray-700 mb-6">Aplikace pro monitorování spotřeby a optimalizaci energií.</p>
 
-                    <!-- Project Details -->
-                    <section class="mb-4 md:mb-6">
-                        <div class="flex flex-col gap-y-2 md:gap-y-3">
-                            <div class="flex flex-wrap gap-x-2">
-                                <h2 class="text-base md:text-lg font-semibold text-blue-500">Časová osa:</h2>
-                                <p>2-3 měsíce</p>
-                            </div>
-                            <div class="flex flex-wrap gap-x-2">
-                                <h2 class="text-base md:text-lg font-semibold text-blue-500">Moje role</h2>
-                                <p>UX/UI Designer</p>
-                            </div>
-                            <div class="flex flex-wrap gap-x-2">
-                                <h2 class="text-base md:text-lg font-semibold text-blue-500">Nástroje:</h2>
-                                <p>Figma, papír a tužka, AI</p>
-                            </div>
-                        </div>
-                    </section>
+          <!-- Project Details as badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <UBadge color="gray" variant="outline">
+              <template #leading>
+                <UIcon name="i-heroicons-clock" />
+              </template>
+              2-3 měsíce
+            </UBadge>
+            <UBadge color="gray" variant="outline">
+              <template #leading>
+                <UIcon name="i-heroicons-user" />
+              </template>
+              UX/UI Designer
+            </UBadge>
+            <UBadge color="gray" variant="outline">
+              <template #leading>
+                <UIcon name="i-heroicons-wrench-screwdriver" />
+              </template>
+              Figma, papír a tužka, AI
+            </UBadge>
+          </div>
 
-                    <!-- Problem Section -->
-                    <section class="mb-4 md:mb-6">
-                        <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-2">Přehled</h2>
-                        <p class="text-gray-700">
-                            Sensorico je firma specializující se na kompletní služby v oblasti ovládání IoT zařízení,
-                            integrace a exportu dat. Firma již disponovala rozhraním pro správce vodoměrů, a mým úkolem
-                            bylo vytvořit samostatné rozhraní pro jejich odběratele.
-                        </p>
-                    </section>
-                </div>
+          <!-- Quick navigation to sections -->
+          <div class="hidden md:flex gap-2 mt-4">
+            <UButton color="blue" variant="ghost" @click="scrollToSection('overview')">
+              Přehled
+            </UButton>
+            <UButton color="blue" variant="ghost" @click="scrollToSection('research')">
+              Výzkum
+            </UButton>
+            <UButton color="blue" variant="ghost" @click="scrollToSection('wireframes')">
+              Wireframes
+            </UButton>
+            <UButton color="blue" variant="ghost" @click="scrollToSection('design')">
+              Design
+            </UButton>
+          </div>
+        </div>
 
-                <!-- Right column - App Mockup -->
-                <div class="w-full md:w-10/12 flex justify-center pt-10 md:pt-20 pl-4 md:pl-20">
-                    <img src="/images/sensorico.gif" alt="Sensorico Mockup" class="max-w-full h-auto" />
-                </div>
+        <!-- Right column - App Mockup -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <UCard class="w-full overflow-hidden border-0">
+            <img src="/images/sensorico.gif" alt="Sensorico Mockup" class="w-full h-auto rounded-lg shadow-lg" />
+          </UCard>
+        </div>
+      </div>
+    </UContainer>
+
+    <!-- Overview Section -->
+    <UContainer id="overview" class="py-12 mx-auto max-w-4xl mb-8 md:mb-12">
+      <UCard class="bg-gray-50">
+        <template #header>
+          <h2 class="text-xl md:text-2xl font-bold text-gray-800">Přehled projektu</h2>
+        </template>
+        <p class="text-gray-700">
+          Sensorico je firma specializující se na kompletní služby v oblasti ovládání IoT zařízení,
+          integrace a exportu dat. Firma již disponovala rozhraním pro správce vodoměrů, a mým úkolem
+          bylo vytvořit samostatné rozhraní pro jejich odběratele.
+        </p>
+      </UCard>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-8">
+        <UCard class="bg-blue-50">
+          <template #header>
+            <div class="flex items-center gap-2">
+              <UIcon name="i-heroicons-exclamation-triangle" class="text-blue-500" />
+              <h2 class="text-lg md:text-xl font-bold text-gray-800">Problém</h2>
             </div>
+          </template>
+          <p class="text-gray-700">
+            Odběratelé vodoměrů mají často těžký přehled o své spotřebě vody, což může vést k
+            neočekávaným výdajům či únikům. Tento nedostatek přehlednosti a včasného přístupu k informacím o spotřebě a fakturách zvyšuje
+            celkovou zátěž, což jsme se snažili řešit prostřednictvím aplikace.
+          </p>
+        </UCard>
 
-            <!-- For the content sections, adding a max-width class to create narrower content on large screens -->
-            <div class="mx-auto max-w-4xl">
-                <!-- Problem Section -->
-                <section class="mb-6 md:mb-8">
-                    <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-2">Problém</h2>
-                    <p class="text-gray-700">
-                        Odběratelé vodoměrů mají často těžký přehled o své spotřebě vody, což může vést k
-                        neočekávaným výdajům či únikům. Tento
-                        nedostatek přehlednosti a včasného přístupu k informacím o spotřebě a fakturách zvyšuje
-                        celkovou zátěž, což jsme se snažili řešit
-                        prostřednictvím aplikace.
-                    </p>
-                </section>
-
-                <!-- Goal Section -->
-                <section class="mb-8 md:mb-12">
-                    <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-2">Cíl</h2>
-                    <p class="text-gray-700">
-                        Vytvořit moderní a intuitivní softwarové rozhraní, které by umožnilo uživatelům sledovat
-                        spotřeby vodoměrů, umožňit jim efektivně faktury na
-                        jednom místě a poskytovat odběratelům možnost plánit platby v aplikaci.
-                    </p>
-                </section>
+        <UCard class="bg-green-50">
+          <template #header>
+            <div class="flex items-center gap-2">
+              <UIcon name="i-heroicons-flag" class="text-green-500" />
+              <h2 class="text-lg md:text-xl font-bold text-gray-800">Cíl</h2>
+            </div>
+          </template>
+          <p class="text-gray-700">
+            Vytvořit moderní a intuitivní softwarové rozhraní, které by umožnilo uživatelům sledovat
+            spotřeby vodoměrů, umožňit jim efektivně faktury na jednom místě a poskytovat odběratelům možnost plánit platby v aplikaci.
+          </p>
+        </UCard>
+      </div>
+    </UContainer>
 
                 <!-- Competitor Analysis -->
-                <div class="mb-12 md:mb-16">
+                <UContainer class="mx-auto max-w-4xl mb-8 md:mb-12">
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Analýza konkurence</h2>
 
                     <p class="text-gray-700 mb-6">
@@ -124,10 +154,10 @@ const mockupItems = ref([
                             návrh byly barevné štítky u faktur, které jsme také implementovali do našeho rozhraní.
                         </p>
                     </div>
-                </div>
+                </UContainer>
 
                 <!-- SECTION 2: User Research -->
-                <div class="mb-8 md:mb-12">
+                <UContainer class="mx-auto max-w-4xl mb-8 md:mb-12">
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Uživatelský výzkum</h2>
                     <p class="text-gray-700 mb-4">
                         Nejprve jsme s klientem diskutovali o klíčových prvcích aplikace na základě jeho zkušeností.
@@ -145,11 +175,11 @@ const mockupItems = ref([
                         </h3>
                         <img src="/images/sensorico/persona.png" alt="Rozhovor s Kateřinou" class="w-full rounded-md" />
                     </div>
-                </div>
+                </UContainer>
             </div>
 
             <!-- SECTION 3: Wireframe - This section can be wider for the images -->
-            <div class="mx-auto max-w-4xl mb-8 md:mb-12">
+            <UContainer class="mx-auto max-w-4xl mb-8 md:mb-12">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Wireframe</h2>
                 <p class="text-gray-700 mb-4">
                     Po vytvoření wireframu a jeho testování klientem jsme na základě konzultace provedli několik úprav
@@ -182,10 +212,10 @@ const mockupItems = ref([
                         </div>
                     </div>
                 </div>
-            </div>
+            </UContainer>
 
             <!-- Return to narrower content -->
-            <div class="mx-auto max-w-4xl">
+            <UContainer class="mx-auto max-w-4xl">
                 <!-- SECTION 6: Design -->
                 <div class="mb-8 md:mb-12">
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Design</h2>
@@ -202,16 +232,14 @@ const mockupItems = ref([
                         ikon, dialogů a upozornění
                     </p>
                 </div>
-            </div>
+            </UContainer>
 
             <!-- App Mockups - Can be a bit wider for the grid -->
-            <div class="mx-auto max-w-4xl mb-8 md:mb-12">
-                <ClientOnly>
-                    <UCarousel v-slot="{ item }" arrows :items="mockupItems" :next="{ color: 'primary' }">
-                        <img :src="item" class="rounded-md shadow-md mx-4 w-[720px]" />
+            <UContainer class="mx-auto w-10/12 max-w-4xl mb-8 md:mb-12">
+                    <UCarousel v-slot="{ item }" arrows :items="mockupItems">
+                        <img :src="item" class="rounded-md shadow-md mx-auto w-[720px]" />
                     </UCarousel>
-                </ClientOnly>
-            </div>
+            </UContainer>
 
             <!-- Contact Section - Back to narrow -->
             <div class="mx-auto max-w-4xl mt-8 flex justify-center mb-8">
@@ -221,9 +249,7 @@ const mockupItems = ref([
                         používání AI prvků při designu.</p>
                     <p>Výsledná aplikace poskytuje efektivní možnost správy vodních účtů a měření spotřeby.</p>
                 </div>
-            </div>
         </div>
-    </GradientBackground>
 </template>
 
 <style scoped>

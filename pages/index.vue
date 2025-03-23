@@ -8,7 +8,7 @@
       <div class="container">
         <div class="projects-grid">
           <NuxtLink to="/flowbudget">
-            <ProjectCard imageUrl="/images/project1.png" title="FLOWBUDGET" description="Aplikace pro správu financí" />
+            <ProjectCard id="projects" imageUrl="/images/project1.png" title="FLOWBUDGET" description="Aplikace pro správu financí" />
           </NuxtLink>
           <NuxtLink to="/sensorico">
             <ProjectCard imageUrl="/images/project2.png" title="SENSORICO"
@@ -54,7 +54,7 @@
 // Import components handled by auto-imports in Nuxt 3
 </script>
 
-<style>
+<style scoped>
 /* Global styles */
 * {
   margin: 0;

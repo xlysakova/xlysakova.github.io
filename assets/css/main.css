@@ -1,7 +1,15 @@
-@import "@nuxt/ui";
 @import "tailwindcss";
+@import "@nuxt/ui";
 
-@theme static {
-  --font-sans: 'Poppins', sans-serif;
-  --color-salmon-500: #C25874;
+* {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-sans: 'Poppins', sans-serif;
+    --color-primary-500: #C25874;
+  }
+
+@theme {
+  --color-primary-500: #C25874;
 }
