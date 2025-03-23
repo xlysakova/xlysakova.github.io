@@ -1,18 +1,18 @@
 <script setup>
-const carouselItems = [
+const carouselItems = ref([
   '/images/competitor-analysis.png',
   '/images/competitor-analysis2.png',
   '/images/competitor-analysis3.png',
-]
+])
 
-const mockupItems = [
+const mockupItems = ref([
   '/images/flowbudget-dashboard.png',
   '/images/flowbudget-transaction.png',
   '/images/flowbudget-categories.png',
   '/images/flowbudget-articles.png',
   '/images/flowbudget-article-detail.png',
   '/images/flowbudget-transactions-history.png',
-]
+])
 </script>
 
 <template>

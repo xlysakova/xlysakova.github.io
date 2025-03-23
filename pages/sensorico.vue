@@ -1,12 +1,12 @@
 <script setup>
-const mockupItems = [
+const mockupItems = ref([
     '/images/components.png',
     '/images/alarms.png',
     '/images/home.png',
     '/images/notification.png',
     '/images/invoices.png',
     '/images/pay.png',
-]
+]);
 </script>
 
 <template>
