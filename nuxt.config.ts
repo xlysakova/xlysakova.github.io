@@ -21,7 +21,8 @@ export default defineNuxtConfig({
           href: 'https://fonts.cdnfonts.com/css/sf-pro-display' 
         }
       ]
-    }
+    },
+    baseURL: '/',
   },
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2025-03-22',

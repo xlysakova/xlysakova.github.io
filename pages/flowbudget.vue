@@ -1,17 +1,17 @@
 <script setup>
 const carouselItems = [
-  `${useRuntimeConfig().app.baseURL}/images/competitor-analysis.png`,
-  `${useRuntimeConfig().app.baseURL}/images/competitor-analysis2.png`,
-  `${useRuntimeConfig().app.baseURL}/images/competitor-analysis3.png`,
+  '/images/competitor-analysis.png',
+  '/images/competitor-analysis2.png',
+  '/images/competitor-analysis3.png',
 ]
 
 const mockupItems = [
-  `${useRuntimeConfig().app.baseURL}/images/flowbudget-dashboard.png`,
-  `${useRuntimeConfig().app.baseURL}/images/flowbudget-transaction.png`,
-  `${useRuntimeConfig().app.baseURL}/images/flowbudget-categories.png`,
-  `${useRuntimeConfig().app.baseURL}/images/flowbudget-articles.png`,
-  `${useRuntimeConfig().app.baseURL}/images/flowbudget-article-detail.png`,
-  `${useRuntimeConfig().app.baseURL}/images/flowbudget-transactions-history.png`,
+  '/images/flowbudget-dashboard.png',
+  '/images/flowbudget-transaction.png',
+  '/images/flowbudget-categories.png',
+  '/images/flowbudget-articles.png',
+  '/images/flowbudget-article-detail.png',
+  '/images/flowbudget-transactions-history.png',
 ]
 </script>
 
