@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2025-03-22',
   tailwindcss: {
-    cssPath: '~/assets/css/main.css',
+    cssPath: '~/assets/css/tailwind.css',
     configPath: '~/tailwind.config.ts',
     exposeConfig: true,
     viewer: true,

@@ -37,14 +37,14 @@ onUnmounted(() => {
       <div class="container">
         <div class="about-content">
           <div class="bio">
-            <div class="title-container">
-              <Wave />
-              <h2 class="text-primary text-[32px] pb-4 md:text-[32px] sm:text-[28px]">Zdravím</h2>
+            <div class="title-container flex items-center pb-4 gap-x-2">
+              <Wave class="block" />
+              <h2 class="text-primary text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
             </div>
 
-            <div class="profile-container">
-              <div class="profile-text">
-                <p class="text-base md:text-lg pb-8">
+            <div class="flex items-start gap-12">
+              <div class="profile-text flex-2">
+                <p class="text-base md:text-lg pb-8 text-pretty">
                   jsem Denisa, junior UX/UI designérka z Brna. Moje cesta k UX/UI designu nebyla úplně přímá – původně
                   jsem
                   pracovala v administrativě, kde jsem si uvědomila, jak důležité je, aby systémy a aplikace byly
@@ -60,8 +60,10 @@ onUnmounted(() => {
                   <li>UX/UI kurz - Udemy</li>
                 </ul>
               </div>
-              <img src="/images/profile.png" alt="my photo" class="profile-image" />
-            </div>
+
+              <img class="object-contain w-[300px]" :src="useRuntimeConfig().app.baseURL + 'images/profile.png'">
+
+</div>
 
             <div class="skills-container">
               <div class="skill-section">
@@ -158,13 +160,6 @@ onUnmounted(() => {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.title-container {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -173,14 +168,6 @@ onUnmounted(() => {
 
 .profile-text {
   flex: 1;
-}
-
-.profile-image {
-  border-radius: 0.375rem;
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
-  align-self: center;
 }
 
 .education-list {
