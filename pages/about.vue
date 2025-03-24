@@ -56,7 +56,7 @@ onUnmounted(() => {
           <div class="bio">
             <div class="title-container flex items-center pb-5 gap-x-2">
               <Wave class="block" />
-              <h2 class="text-primary-500 text-[32px] md:text-[32px] sm:text-[28px]">Zdravím</h2>
+              <h2 class="text-primary-500 text-[32px] md:text-[32px] sm:text-[28px]">Zdravím,</h2>
             </div>
 
             <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -67,7 +67,7 @@ onUnmounted(() => {
               
               <div class="profile-text flex-1 md:order-1">
                 <p class="text-base md:text-lg pb-6 text-pretty">
-                  jsem Denisa, junior UX/UI designérka z Brna. Moje cesta k UX/UI designu nebyla úplně přímá – původně
+                  jmenuji se Denisa, junior UX/UI designérka z Brna. Moje cesta k UX/UI designu nebyla úplně přímá – původně
                   jsem pracovala v administrativě, kde jsem si uvědomila, jak důležité je, aby systémy a aplikace byly
                   intuitivní a uživatelsky přívětivé. To mě vedlo k rozhodnutí změnit kariéru a věnovat se oblasti, kde mohu spojit
                   kreativitu s logickým myšlením.

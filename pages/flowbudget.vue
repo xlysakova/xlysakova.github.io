@@ -115,6 +115,34 @@ const scrollToSection = (id) => {
       </div>
     </UContainer>
 
+        <!-- Competitor Analysis -->
+        <div class="bg-gray-50 py-12">
+      <UContainer>
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6">Analýza konkurence</h2>
+        
+        <UCard class="mb-8">
+          <p class="text-gray-700">
+            Pro analýzu konkurence jsem si vybrala tři aplikace, z nichž dvě jsou zaměřené na správu financí
+            a jedna je určena pro plánování nákupů.
+          </p>
+        </UCard>
+
+        <!-- Competitor Analysis Carousel -->
+        <UCard class="mx-8 border-0 shadow-xl p-0">
+          <UCarousel v-slot="{ item }" arrows :items="carouselItems" class="bg-gray-100 rounded-lg">
+            <div class="p-4">
+              <img :src="item" class="rounded-lg shadow-md mx-auto max-h-[600px] object-contain" />
+            </div>
+          </UCarousel>
+          <template #footer>
+            <div class="text-center py-4 bg-gray-50">
+              <p class="text-gray-700 font-medium">Porovnání konkurenčních aplikací</p>
+            </div>
+          </template>
+        </UCard>
+      </UContainer>
+    </div>
+
     <!-- User Research Section -->
     <div class="bg-gray-50 py-12">
       <UContainer id="research">
@@ -175,144 +203,10 @@ const scrollToSection = (id) => {
 
       <UCard class="bg-green-50 overflow-hidden">
         <div class="flex flex-col md:flex-row gap-6">
-          <div class="md:w-1/3">
             <img src="/images/persona-jakub.png" alt="Persona - Jakub" class="w-full rounded-lg shadow-sm" />
-          </div>
-          
-          <div class="md:w-2/3">
-            <div class="flex items-center gap-2 mb-4">
-              <UIcon name="i-heroicons-user" class="text-green-600 text-xl" />
-              <h3 class="text-xl font-bold">Jakub</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div class="bg-white/60 p-3 rounded-lg">
-                <p class="flex items-center gap-2 mb-1">
-                  <UIcon name="i-heroicons-cake" class="text-cyan-500" />
-                  <span>30 let</span>
-                </p>
-                <p class="flex items-center gap-2 mb-1">
-                  <UIcon name="i-heroicons-map-pin" class="text-cyan-500" />
-                  <span>Praha 8</span>
-                </p>
-                <p class="flex items-center gap-2 mb-1">
-                  <UIcon name="i-heroicons-camera" class="text-cyan-500" />
-                  <span>Fotograf (freelancer)</span>
-                </p>
-                <p class="flex items-center gap-2 mb-1">
-                  <UIcon name="i-heroicons-user" class="text-cyan-500" />
-                  <span>Single</span>
-                </p>
-              </div>
-              
-              <div class="bg-white/60 p-3 rounded-lg">
-                <h4 class="font-semibold mb-2 flex items-center gap-2">
-                  <UIcon name="i-heroicons-identification" class="text-cyan-500" />
-                  Bio
-                </h4>
-                <p class="text-sm">
-                  Fotograf na volné noze, což znamená, že nemá pravidelný příjem. Musí si odkládat část svých
-                  financí na horší časy. Život freelancera je někdy stresující a finančně nevyzpitatelný.
-                </p>
-                <p class="text-sm mt-2">
-                  Jakub chce mít o svých financích lepší přehled, aby mohl plánovat nejen osobní, ale i pracovní
-                  výdaje. Měl by zájem začít do budoucna investovat, ale zároveň si není jistý, jaký je nejlepší
-                  způsob, jak začít.
-                </p>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="bg-white/60 p-3 rounded-lg">
-                <h4 class="font-semibold mb-2 flex items-center gap-2">
-                  <UIcon name="i-heroicons-check-circle" class="text-green-500" />
-                  Potřeby
-                </h4>
-                <ul class="space-y-1 text-sm">
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-check" class="text-green-500 flex-shrink-0 mt-1" />
-                    <span>Přehledná aplikace</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-check" class="text-green-500 flex-shrink-0 mt-1" />
-                    <span>Jednoduché a časově nenáročné používání aplikace</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-check" class="text-green-500 flex-shrink-0 mt-1" />
-                    <span>Kategorizace výdajů</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-check" class="text-green-500 flex-shrink-0 mt-1" />
-                    <span>Upozornění na překročení limitu spotřeby</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-check" class="text-green-500 flex-shrink-0 mt-1" />
-                    <span>Ocení by stručné novinky, návody ze světa financí a investic</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div class="bg-white/60 p-3 rounded-lg">
-                <h4 class="font-semibold mb-2 flex items-center gap-2">
-                  <UIcon name="i-heroicons-x-circle" class="text-red-500" />
-                  Frustrace
-                </h4>
-                <ul class="space-y-1 text-sm">
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-x-mark" class="text-red-500 flex-shrink-0 mt-1" />
-                    <span>Zahlcení zbytečnými funkcemi</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-x-mark" class="text-red-500 flex-shrink-0 mt-1" />
-                    <span>Příliš velké množství reklam</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-x-mark" class="text-red-500 flex-shrink-0 mt-1" />
-                    <span>Nepravidelný příjem z freelancingu</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-x-mark" class="text-red-500 flex-shrink-0 mt-1" />
-                    <span>Zastaralé aplikace</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <UIcon name="i-heroicons-x-mark" class="text-red-500 flex-shrink-0 mt-1" />
-                    <span>Příliš mnoho placených funkcí v aplikaci</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </UCard>
     </UContainer>
-
-    <!-- Competitor Analysis -->
-    <div class="bg-gray-50 py-12">
-      <UContainer>
-        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6">Analýza konkurence</h2>
-        
-        <UCard class="mb-8">
-          <p class="text-gray-700">
-            Pro analýzu konkurence jsem si vybrala tři aplikace, z nichž dvě jsou zaměřené na správu financí
-            a jedna je určena pro plánování nákupů.
-          </p>
-        </UCard>
-
-        <!-- Competitor Analysis Carousel -->
-        <UCard class="overflow-hidden border-0 shadow-xl p-0">
-          <UCarousel v-slot="{ item }" arrows :items="carouselItems" class="bg-gray-100 rounded-lg">
-            <div class="p-4">
-              <img :src="item" class="rounded-lg shadow-md mx-auto max-h-[600px] object-contain" />
-            </div>
-          </UCarousel>
-          <template #footer>
-            <div class="text-center py-4 bg-gray-50">
-              <p class="text-gray-700 font-medium">Porovnání konkurenčních aplikací</p>
-            </div>
-          </template>
-        </UCard>
-      </UContainer>
-    </div>
 
     <!-- Moodboard Section -->
     <UContainer class="py-12">
@@ -322,7 +216,7 @@ const scrollToSection = (id) => {
         <p class="text-gray-700 mb-6">
           Po vytvoření skici návrhu následovalo sestavení moodboardu. Zaměřila jsem se na minimalistický styl
           aplikace, který uživatelům nabídne jasné a přehledné prostředí bez zbytečného zahlcení informacemi. 
-          Primární barvou jsem zvolila <UBadge color="cyan">modrou</UBadge>, jelikož u lidí vzbuzuje důvěryhodnost a profesionalitu,
+          Primární barvou jsem zvolila <b color="cyan">modrou</b>, jelikož u lidí vzbuzuje důvěryhodnost a profesionalitu,
           což byly klíčové vlastnosti, které jsem chtěla v aplikaci dosáhnout.
         </p>
         
@@ -340,7 +234,7 @@ const scrollToSection = (id) => {
         <UCard class="mb-8">
           <p class="text-gray-700">
             Při tvorbě designu jsem se soustředila na základě zpětné vazby od uživatelů na dvě klíčové oblasti – 
-            <UBadge color="cyan">dashboard</UBadge> a <UBadge color="cyan">články</UBadge>. V dashboardu 
+            <b color="cyan">dashboard</b> a <b color="cyan">články</b>. V dashboardu 
             najdou uživatelé všechny důležité informace o aplikaci, jako je propojení s platební kartou, aktuální limit
             na daný měsíc, možnost manuálně přidat platbu (včetně hotovosti). Sekce článků je rozdělena do různých kategorií, aby si každý uživatel mohl
             snadno najít téma, které ho zajímá. Dále je tu i možnost přidávat komentáře k článkům, což uživatelům umožňuje sdílet své názory a
@@ -377,7 +271,7 @@ const scrollToSection = (id) => {
           </template>
           
           <p class="text-gray-700 mb-4">
-            Kde si můžu časový rámec jako uživatel nastavit?
+            Kde si můžu časový rámec jako uživatel nastavit? Bylo potřeba přidat filtr pro časový horizont.
           </p>
           
           <div class="grid grid-cols-2 gap-3">
@@ -445,7 +339,9 @@ const scrollToSection = (id) => {
               Zpět na projekty
             </UButton>
             <UButton color="cyan" icon="i-heroicons-envelope" variant="solid">
-              Kontaktujte mě
+              <a href="mailto:lysakova.denisa98@gmail.com" class="mobile-nav-link" @click="isOpen = false">
+                Kontaktujte mě
+              </a>
             </UButton>
           </div>
         </template>

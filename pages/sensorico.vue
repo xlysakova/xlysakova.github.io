@@ -77,9 +77,7 @@ const mockupItems = ref([
           <h2 class="text-xl md:text-2xl font-bold text-gray-800">Přehled projektu</h2>
         </template>
         <p class="text-gray-700">
-          Sensorico je firma specializující se na kompletní služby v oblasti ovládání IoT zařízení,
-          integrace a exportu dat. Firma již disponovala rozhraním pro správce vodoměrů, a mým úkolem
-          bylo vytvořit samostatné rozhraní pro jejich odběratele.
+          Sensorico je firma specializující se na kompletní služby v oblasti ovládání IoT zařízení, integrace a exportu dat.  Firma již disponovala rozhraním pro správce vodoměrů, a mým úkolem bylo vytvořit samostatné rozhraní pro jejich odběratele.
         </p>
       </UCard>
 
@@ -92,9 +90,7 @@ const mockupItems = ref([
             </div>
           </template>
           <p class="text-gray-700">
-            Odběratelé vodoměrů mají často těžký přehled o své spotřebě vody, což může vést k
-            neočekávaným výdajům či únikům. Tento nedostatek přehlednosti a včasného přístupu k informacím o spotřebě a fakturách zvyšuje
-            celkovou zátěž, což jsme se snažili řešit prostřednictvím aplikace.
+            Odběratelé vodoměrů často nemají dostatečný přehled o své spotřebě vody, což může vést k nečekaně vysokým výdajům. Problémy také nastávají s dohledatelností historických faktur a nejasnostmi ohledně aktuálních měření.
           </p>
         </UCard>
 
@@ -106,8 +102,7 @@ const mockupItems = ref([
             </div>
           </template>
           <p class="text-gray-700">
-            Vytvořit moderní a intuitivní softwarové rozhraní, které by umožnilo uživatelům sledovat
-            spotřeby vodoměrů, umožňit jim efektivně faktury na jednom místě a poskytovat odběratelům možnost plánit platby v aplikaci.
+            Vytvořit intuitivní a efektivní uživatelské rozhraní. Díky aplikaci pro správu vodoměrů mohou odběratelé jednoduše monitorovat svou spotřebu, sledovat aktuální i historická data a mít možnost provádět platby přímo v aplikaci.
           </p>
         </UCard>
       </div>
@@ -188,7 +183,7 @@ const mockupItems = ref([
 
                 <div class="flex flex-col lg:flex-row gap-6">
                     <div class="flex flex-col">
-                        <h4 class="text-blue-500 pb-1">Hlavní stránka</h4>
+                        <h4 class="text-blue-500 pb-1">Stará hlavní stránka</h4>
                         <img src="/images/dashboard.png" alt="Dashboard" class="w-full h-auto" />
                     </div>
                     <div class="flex flex-col">
@@ -206,7 +201,7 @@ const mockupItems = ref([
                                 </p>
                             </div>
                             <div class="flex flex-col">
-                                <h4 class="text-blue-500 pb-1">Hlavní stránka</h4>
+                                <h4 class="text-blue-500 pb-1">Nová hlavní stránka</h4>
                                 <img src="/images/dashboard-update.png" alt="Updated Dashboard" class="w-full h-auto" />
                             </div>
                         </div>
@@ -220,16 +215,7 @@ const mockupItems = ref([
                 <div class="mb-8 md:mb-12">
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Design</h2>
                     <p class="text-gray-700 mb-4">
-                        Po vytvoření wireframů nastal čas výsledného designu. Zvolila jsem primární a sekundární barvy
-                        byly
-                        stanoveny klientem, takže jsem se dále
-                        zaměřoval především na:
-                        <br /><br />
-                        <span class="text-blue-500 font-semibold">Komponenty</span> - Standardizované prvky UI jako
-                        tlačítka, vstupní pole, grafy pro konzistentní UX
-                        <br />
-                        <span class="text-blue-500 font-semibold">Atomy a stavry</span> - Základní stavební prvky včetně
-                        ikon, dialogů a upozornění
+                      Po schválení wireframu nastal čas vdechnout designu život. Styl písma a primární barvy byly stanoveny klientem, takže jsem se držela zadaných pokynů.
                     </p>
                 </div>
             </UContainer>
@@ -245,9 +231,7 @@ const mockupItems = ref([
             <div class="mx-auto max-w-4xl mt-8 flex justify-center mb-8">
                 <div class="bg-purple-50 p-4 sm:p-6 rounded-lg w-full text-center">
                     <h2 class="text-lg md:text-xl font-bold mb-3">Závěr</h2>
-                    <p class="mb-3">Tento projekt mi pomohl rozvinout mé schopnosti v oblasti uživatelského rozhraní a
-                        používání AI prvků při designu.</p>
-                    <p>Výsledná aplikace poskytuje efektivní možnost správy vodních účtů a měření spotřeby.</p>
+                    <p class="mb-3">Před spuštěním aplikace je ještě potřeba doladit finální detaily, jako jsou texty a grafy. Po implementaci jsou v plánu uživatelské testy, na jejichž základě provedeme případné úpravy.</p>
                 </div>
         </div>
 </template>
