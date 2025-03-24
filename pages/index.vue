@@ -22,8 +22,16 @@
       <SectionTitle title="Další práce" />
       <div class="container">
         <div class="additional-works-grid">
-          <ImageCard imageUrl="/images/sweet_bites.gif" title="Sweet bites" />
-          <ImageCard imageUrl="/images/handbag.gif" title="Sweet bites" />
+          <NuxtLink target="_blank" external="true" to="https://www.figma.com/proto/jqvnYIK66LzD5LYdMFu07Y/Denisa-Hand-bag---Ecom-V1?node-id=128-4&starting-point-node-id=128%3A4">
+            <div>
+              <ImageCard imageUrl="/images/handbag.gif" title="Sweet bites" />
+            </div>
+          </NuxtLink>
+          <NuxtLink target="_blank" external="true" to="https://www.figma.com/proto/6HDm9nNh2dHpeAt8CBRVM3/Untitled?node-id=40-159&p=f&t=gltb9W0Op381ULSi-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=74%3A690&show-proto-sidebar=1">
+            <div>
+              <ImageCard imageUrl="/images/sweet_bites.gif" title="Sweet bites" />
+            </div>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -60,7 +68,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
 }
 
 body {

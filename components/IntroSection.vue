@@ -2,10 +2,10 @@
     <section class="intro-section">
         <div class="content">
             <h1>
-                Zdravím, jmenuji se <span class="italic text-primary-500">Denisa</span><br />
-                a jsem <span class="italic text-primary-500">UX/UI DESIGNER</span>
+                Zdravím, jmenuji se <span class="italic font-thin text-primary-500">Denisa</span><br />
+                a jsem <span class="italic font-thin text-primary-500">UX/UI DESIGNER</span>
             </h1>
-            <div class="scroll-arrow flex justify-center">
+            <div @click="handleArrowClick" class="cursor-pointer scroll-arrow flex justify-center">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M19 12L12 19L5 12" stroke="#333" stroke-width="2" stroke-linecap="round"
@@ -16,8 +16,16 @@
     </section>
 </template>
 
-<script setup>
-// No props needed
+<script setup lang="ts">
+const handleArrowClick = () => {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+    });
+};
+
+
+
 </script>
 
 <style scoped>
@@ -28,6 +36,10 @@
     align-items: center;
     text-align: center;
     padding: 0 2rem;
+
+    @media (max-width: 768px) {
+        height: calc(50vh);
+    }
 }
 
 .content {

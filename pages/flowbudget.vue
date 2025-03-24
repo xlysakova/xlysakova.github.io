@@ -76,6 +76,11 @@ const scrollToSection = (id) => {
           <UCard class="overflow-hidden border-0 shadow-xl p-0 bg-transparent">
             <img src="/images/flowbudget.gif" alt="Flow Budget Mockup" 
               class="w-[240px] sm:w-[280px] md:w-full max-w-[300px] h-auto rounded-xl shadow-lg" />
+              <div class="text-center pt-3 text-cyan-500">
+                <NuxtLink class="underline" target="_blank" external="true" to="https://www.figma.com/proto/oFr7bkUxWyIhB8Qxd5BqIP/Flow-Budget?node-id=328-290&starting-point-node-id=328%3A780&t=5pf8gbfU4exXSmuq-1">
+                  Prototyp
+                </NuxtLink>
+              </div>
           </UCard>
         </div>
       </div>

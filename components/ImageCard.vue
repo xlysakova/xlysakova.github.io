@@ -37,7 +37,6 @@ defineProps<{
     width: 100%;
     height: 100%;
     position: relative;
-    aspect-ratio: 16/9;
 }
 
 img {
@@ -45,5 +44,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 16/9;
 }
 </style>

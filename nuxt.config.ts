@@ -12,10 +12,15 @@ export default defineNuxtConfig({
     ],
   },
   ui: {
-    fonts: true,
+    fonts: false,
     colorMode: true
   },
   colorMode: {
     preference: 'light'
-  }
+  },
+  fonts: {
+    families: [
+      { name: 'Poppins', provider: 'google' },
+    ],
+  },
 })
