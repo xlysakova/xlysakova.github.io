@@ -22,12 +22,12 @@
       <SectionTitle title="Další práce" />
       <div class="container">
         <div class="additional-works-grid">
-          <NuxtLink target="_blank" external="true" to="https://www.figma.com/proto/jqvnYIK66LzD5LYdMFu07Y/Denisa-Hand-bag---Ecom-V1?node-id=128-6&starting-point-node-id=128%3A4&scaling=contain&content-scaling=fixed&t=GVfjiY29TsdNtHFp-1">
+          <NuxtLink target="_blank" external to="https://www.figma.com/proto/jqvnYIK66LzD5LYdMFu07Y/Denisa-Hand-bag---Ecom-V1?node-id=128-6&starting-point-node-id=128%3A4&scaling=contain&content-scaling=fixed&t=GVfjiY29TsdNtHFp-1">
             <div>
               <ImageCard imageUrl="/images/handbag.gif" title="Sweet bites" />
             </div>
           </NuxtLink>
-          <NuxtLink target="_blank" external="true" to="https://www.figma.com/proto/6HDm9nNh2dHpeAt8CBRVM3/Untitled?node-id=132-249&p=f&t=4xLkXDMm9cX35aSO-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=132%3A249&show-proto-sidebar=1">
+          <NuxtLink target="_blank" external to="https://www.figma.com/proto/6HDm9nNh2dHpeAt8CBRVM3/Untitled?node-id=132-249&p=f&t=4xLkXDMm9cX35aSO-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=132%3A249&show-proto-sidebar=1">
             <div>
               <ImageCard imageUrl="/images/sweet_bites.gif" title="Sweet bites" />
             </div>

@@ -66,7 +66,7 @@ const mockupItems = ref([
           <UCard class="w-full overflow-hidden border-0">
             <img src="/images/sensorico.gif" alt="Sensorico Mockup" class="w-full h-auto rounded-lg shadow-lg" />
             <div class="text-center pt-3 text-blue-500">
-                <NuxtLink class="underline" target="_blank" external="true" to="https://www.figma.com/proto/NUS9zSEXDFr3bBhLvuXWze/Sensorico?node-id=284-6779&p=f&t=c1aehfOqpztdmfF3-1&scaling=contain&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=420%3A4501">
+                <NuxtLink class="underline" target="_blank" to="https://www.figma.com/proto/NUS9zSEXDFr3bBhLvuXWze/Sensorico?node-id=284-6779&p=f&t=c1aehfOqpztdmfF3-1&scaling=contain&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=420%3A4501">
                   Prototyp
                 </NuxtLink>
               </div>
