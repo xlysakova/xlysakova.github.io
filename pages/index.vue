@@ -7,6 +7,10 @@
       <SectionTitle title="Projekty" />
       <div class="container">
         <div class="projects-grid">
+          <NuxtLink to="/sensorico-web">
+            <ProjectCard imageUrl="/images/project3.png" title="WEB"
+              description="Redesign landing page pro IoT řešení" />
+          </NuxtLink>
           <NuxtLink to="/flowbudget">
             <ProjectCard id="projects" imageUrl="/images/project1.png" title="FLOWBUDGET" description="Aplikace pro správu financí" />
           </NuxtLink>
@@ -96,7 +100,7 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -156,6 +160,12 @@ body {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;

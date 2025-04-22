@@ -60,6 +60,9 @@
             <NuxtLink to="/sensorico" class="mobile-nav-link" @click="closeMobileMenu">
               Sensorico
             </NuxtLink>
+            <NuxtLink to="/sensorico-web" class="mobile-nav-link" @click="closeMobileMenu">
+              Sensorico Web
+            </NuxtLink>
           </div>
         </div>
       </div>
