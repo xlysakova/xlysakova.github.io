@@ -1,7 +1,6 @@
 <script setup>
 const mockupItems = ref([
     '/images/components.png',
-    '/images/alarms.png',
     '/images/home.png',
     '/images/notification.png',
     '/images/invoices.png',
